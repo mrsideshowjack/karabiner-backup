@@ -1,0 +1,16 @@
+.idea
+.vscode
+node_modules
+.code-workspace
+/**/.nuxt
+*_result.*
+.yarn
+coverage
+dist
+!packages/front-icons/dist
+yarn-error.log
+db.json
+.env
+.DS_Store
+storybook-static
+temp/
