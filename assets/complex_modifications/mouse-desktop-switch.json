@@ -1,0 +1,60 @@
+{
+  "title": "Switch desktop with mouse swipe",
+  "rules": [
+    {
+      "description": "[Microsoft BT mouse] Maps mouse swipe down to left desktop switch, mouse swipe up to right desktop switch",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button5"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1118
+                },
+                {
+                  "vendor_id": 1954
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": "left_control"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1118
+                },
+                {
+                  "vendor_id": 1954
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
