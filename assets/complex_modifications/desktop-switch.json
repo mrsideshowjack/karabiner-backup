@@ -1,34 +1,72 @@
 {
-"title": "Switch desktop with right option & control",
-"rules": [
+  "title": "Switch desktop with right option & control",
+  "rules": [
     {
-    "description": "Maps right option to left desktop switch, right control to right desktop switch",
-    "manipulators": [
+      "description": "Maps right option to left desktop switch, right control to right desktop switch & option + A/D",
+      "manipulators": [
         {
-        "type": "basic",
-        "from": {
+          "type": "basic",
+          "from": {
             "key_code": "right_option"
-        },
-        "to": [
+          },
+          "to": [
             {
-            "key_code": "left_arrow",
-            "modifiers": "left_control"
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_control"
+              ]
             }
-        ]
+          ]
         },
         {
-        "type": "basic",
-        "from": {
+          "type": "basic",
+          "from": {
             "key_code": "right_control"
-        },
-        "to": [
+          },
+          "to": [
             {
-            "key_code": "right_arrow",
-            "modifiers": "left_control"
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_control"
+              ]
             }
-        ]
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": [
+              "left_option"
+            ]
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": [
+              "left_option"
+            ]
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "left_control"
+              ]
+            }
+          ]
         }
-    ]
+      ]
     }
-]
+  ]
 }
