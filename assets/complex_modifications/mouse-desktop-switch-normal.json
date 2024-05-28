@@ -1,0 +1,62 @@
+{
+  "title": "Mouse Button 4 as Left/Right Click with Control + Arrow Keys",
+  "rules": [
+      {
+          "description": "Mouse Button 4 as Left Click with Left Control + Left Arrow, and Right Click with Right Control + Right Arrow",
+          "manipulators": [
+              {
+                  "type": "basic",
+                  "from": {
+                      "pointing_button": "button4",
+                      "modifiers": {
+                          "optional": [
+                              "any"
+                          ]
+                      }
+                  },
+                  "to": [
+                      {
+                          "key_code": "left_arrow",
+                          "modifiers": [
+                              "left_control"
+                          ]
+                      }
+                  ],
+                  "conditions": [
+                      {
+                          "type": "mouse_button",
+                          "button": "button1",
+                          "is_pressed": true
+                      }
+                  ]
+              },
+              {
+                  "type": "basic",
+                  "from": {
+                      "pointing_button": "button4",
+                      "modifiers": {
+                          "optional": [
+                              "any"
+                          ]
+                      }
+                  },
+                  "to": [
+                      {
+                          "key_code": "right_arrow",
+                          "modifiers": [
+                              "right_control"
+                          ]
+                      }
+                  ],
+                  "conditions": [
+                      {
+                          "type": "mouse_button",
+                          "button": "button2",
+                          "is_pressed": true
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}
